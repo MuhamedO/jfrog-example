@@ -19,8 +19,9 @@ pipelines:
           onExecute:
             - sudo apt update
             - sudo chmod 1777 /tmp
+            - curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
             - sudo apt update
-            - sudo apt install nodejs@10.0.0 npm
+            - sudo apt-get install --yes nodejs npm
             - sudo apt install --fix-broken
             - sudo npm install -g @neuralegion/nexploit-cli --unsafe-perm=true
             - |
