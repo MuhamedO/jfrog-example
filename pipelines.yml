@@ -22,11 +22,7 @@ pipelines:
             - sudo apt update
             - sudo apt-get install --yes nodejs npm
             - sudo apt install --fix-broken
-            - sudo npm cache clean -f
-            - sudo npm install -g n
-            - sudo n 12.13.0
             - sudo npm install -g @neuralegion/nexploit-cli --unsafe-perm=true
-            - sudo npm rebuild raw-socket --update-binary
             - |
                 SCAN_ID=$(nexploit-cli scan:run                                                \
                   --name "💎 Broken Crystals for a #${res_jfrognexploit_commitSha} #${run_id}" \
